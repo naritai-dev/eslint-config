@@ -1,6 +1,6 @@
 {
     "name": "@naritai-dev/eslint-config",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Strict ESLint and Prettier configuration for Next.js + TypeScript + React + Tailwind CSS projects with complexity limit of 3",
     "main": "index.js",
     "files": [
