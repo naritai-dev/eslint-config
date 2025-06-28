@@ -1,0 +1,55 @@
+{
+    "name": "@naritai-dev/eslint-config",
+    "version": "1.0.0",
+    "description": "Strict ESLint and Prettier configuration for Next.js + TypeScript + React + Tailwind CSS projects with complexity limit of 3",
+    "main": "index.js",
+    "files": [
+        "index.js",
+        ".eslintrc.json",
+        ".prettierrc",
+        ".vscode/settings.json"
+    ],
+    "keywords": [
+        "eslint",
+        "prettier",
+        "config",
+        "typescript",
+        "react",
+        "nextjs",
+        "tailwindcss",
+        "strict",
+        "complexity-limit",
+        "naritai-dev"
+    ],
+    "author": {
+        "name": "JustinRikuto Chris",
+        "email": "justingottamakeit@gmail.com"
+    },
+    "license": "MIT",
+    "peerDependencies": {
+        "eslint": "^9.0.0",
+        "prettier": "^3.0.0",
+        "@typescript-eslint/eslint-plugin": "^7.0.0",
+        "@typescript-eslint/parser": "^7.0.0",
+        "eslint-config-next": "^15.0.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-react": "^7.0.0",
+        "eslint-plugin-react-hooks": "^5.0.0",
+        "eslint-plugin-jsx-a11y": "^6.0.0",
+        "eslint-plugin-import": "^2.0.0",
+        "eslint-plugin-tailwindcss": "^3.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^9.0.0",
+        "prettier": "^3.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xiitus/eslint-config.git"
+    },
+    "scripts": {
+        "publish:patch": "npm version patch && npm publish",
+        "publish:minor": "npm version minor && npm publish",
+        "publish:major": "npm version major && npm publish"
+    }
+}
