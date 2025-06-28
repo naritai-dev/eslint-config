@@ -37,11 +37,36 @@
         "@typescript-eslint/no-floating-promises": "error",
         "@typescript-eslint/await-thenable": "error",
         "@typescript-eslint/no-misused-promises": "error",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "function",
+                "format": ["snake_case"]
+            },
+            {
+                "selector": "variable",
+                "format": ["snake_case"]
+            },
+            {
+                "selector": "parameter",
+                "format": ["snake_case"]
+            },
+            {
+                "selector": "interface",
+                "format": ["PascalCase"]
+            },
+            {
+                "selector": "typeAlias",
+                "format": ["PascalCase"]
+            }
+        ],
         "complexity": ["error", 3],
         "max-depth": ["error", 3],
         "max-lines-per-function": ["error", 50],
         "max-params": ["error", 3],
         "max-nested-callbacks": ["error", 3],
+        "camelcase": ["error", { "properties": "always" }],
+        "id-match": ["error", "^[a-z_][a-z0-9_]*$"],
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
         "react/jsx-uses-react": "off",
@@ -100,8 +125,10 @@
         "import/no-unused-modules": "error",
         "no-console": "error",
         "no-debugger": "error",
+        "no-alert": "error",
         "no-duplicate-imports": "error",
         "no-unused-expressions": "error",
+        "no-unreachable": "error",
         "prefer-const": "error",
         "no-var": "error",
         "object-shorthand": "error",
