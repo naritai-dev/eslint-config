@@ -8,6 +8,20 @@ naritai-dev組織のNext.js + TypeScript + Reactプロジェクト用の共有ES
 npm install --save-dev @naritai-dev/eslint-config
 ```
 
+### Tailwind CSS v4を使用している場合
+
+Tailwind CSS v4を使用しているプロジェクトでは、以下のコマンドを使用してください：
+
+```bash
+npm install --save-dev @naritai-dev/eslint-config --legacy-peer-deps
+```
+
+または
+
+```bash
+npm install --save-dev @naritai-dev/eslint-config --force
+```
+
 ## 使用方法
 
 ### ESLint設定
@@ -67,4 +81,4 @@ npm update @naritai-dev/eslint-config
 
 ## ライセンス
 
-MIT 
+MIT

@@ -18,8 +18,7 @@
         "react",
         "react-hooks",
         "jsx-a11y",
-        "import",
-        "tailwindcss"
+        "import"
     ],
     "rules": {
         "@typescript-eslint/no-unused-vars": [
@@ -145,10 +144,7 @@
         "no-useless-return": "error",
         "prefer-promise-reject-errors": "error",
         "require-await": "error",
-        "yoda": "error",
-        "tailwindcss/classnames-order": "error",
-        "tailwindcss/no-custom-classname": "error",
-        "tailwindcss/no-contradicting-classname": "error"
+        "yoda": "error"
     },
     "settings": {
         "react": {

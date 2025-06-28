@@ -20,5 +20,6 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "typescript.suggest.autoImports": true,
-    "typescript.updateImportsOnFileMove.enabled": "always"
-} 
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "git.ignoreLimitWarning": true
+}
