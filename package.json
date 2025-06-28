@@ -27,21 +27,21 @@
     },
     "license": "MIT",
     "peerDependencies": {
-        "eslint": "^9.0.0",
-        "prettier": "^3.0.0",
-        "@typescript-eslint/eslint-plugin": "^7.0.0",
-        "@typescript-eslint/parser": "^7.0.0",
-        "eslint-config-next": "^15.0.0",
-        "eslint-config-prettier": "^9.0.0",
-        "eslint-plugin-react": "^7.0.0",
-        "eslint-plugin-react-hooks": "^5.0.0",
-        "eslint-plugin-jsx-a11y": "^6.0.0",
-        "eslint-plugin-import": "^2.0.0",
-        "eslint-plugin-tailwindcss": "^3.0.0"
+        "eslint": "^9.30.0",
+        "prettier": "^3.6.2",
+        "@typescript-eslint/eslint-plugin": "^8.35.0",
+        "@typescript-eslint/parser": "^8.35.0",
+        "eslint-config-next": "^15.3.4",
+        "eslint-config-prettier": "^10.1.5",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-tailwindcss": "^3.18.0"
     },
     "devDependencies": {
-        "eslint": "^9.0.0",
-        "prettier": "^3.0.0"
+        "eslint": "^9.30.0",
+        "prettier": "^3.6.2"
     },
     "repository": {
         "type": "git",
