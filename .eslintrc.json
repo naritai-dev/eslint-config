@@ -82,14 +82,6 @@
             {
                 "selector": "accessor",
                 "format": ["camelCase"]
-            },
-            {
-                "selector": "getter",
-                "format": ["camelCase"]
-            },
-            {
-                "selector": "setter",
-                "format": ["camelCase"]
             }
         ],
         "complexity": ["error", 3],

@@ -1,7 +1,9 @@
-const path = require('path');
+import prettierConfig from './.prettierrc' assert { type: 'json' };
+import vscodeConfig from './.vscode/settings.json' assert { type: 'json' };
+import eslintConfig from './eslint.config.js';
 
-module.exports = {
-    extends: [path.resolve(__dirname, '.eslintrc.json')],
-    prettier: require('./.prettierrc'),
-    vscode: require('./.vscode/settings.json')
+export default {
+    eslint: eslintConfig,
+    prettier: prettierConfig,
+    vscode: vscodeConfig,
 };
