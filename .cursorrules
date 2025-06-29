@@ -229,3 +229,39 @@ import './styles.css';
 - TypeScriptコンパイルエラーがないことを確認
 - 不要なコードがないことを確認
 - 適切な型定義がされていることを確認
+
+# ESLint設定パッケージ設計に関する注意
+
+## import ... assert { type: 'json' } 構文の利用について
+- Node.js（特にESLintやNext.jsの実行環境）では、`import ... assert { type: 'json' }` 構文がサポートされていない場合が多い。
+- 設定パッケージのエントリーポイント（index.js）でこの構文を使うと、ESLintやNext.jsのlint実行時に `Unexpected identifier 'assert'` エラーが発生する。
+- これは、Node.jsのバージョンやESLintの内部実装がESMのimport assertionsに未対応なため。
+
+## 防止策
+- ESLint設定パッケージのエントリーポイントは「ESLint設定（eslint.config.js）」のみをエクスポートする形にする。
+- JSONや他の設定をまとめてexportしたい場合も、ESLintで直接importされるファイルはESLint設定だけに限定する。
+- 実務で利用する場合は、`import ... assert { type: 'json' }`を避け、CommonJS形式やESLintがサポートする形式で記述する。
+- Next.jsやESLintの設定ファイルでパッケージを指定する場合は、`@your-pkg/eslint.config.js`のように設定ファイルを直接importする。
+
+## 例
+- NG: `import prettierConfig from './.prettierrc' assert { type: 'json' };`
+- OK: `import eslintConfig from '@your-pkg/eslint.config.js'; export default eslintConfig;`
+
+# Next.js App Routerでのクライアント/サーバーコンポーネント設計指針
+
+## 基本原則
+- appディレクトリ配下のファイルはデフォルトでサーバーコンポーネントとして扱われる。
+- Reactのフック（useState, useEffect, useCallback等）を使う場合は、必ずファイル先頭に "use client" を記述する。
+- カスタムフックも同様に "use client" を付与する。
+- サーバー/クライアントの責務を明確に分離し、設計段階で意識すること。
+
+## 防止策
+- フックを使うファイルには必ず "use client" ディレクティブを追加する。
+- コンポーネント設計時にサーバー/クライアントの役割を明確にする。
+- エラーが発生した場合は、まず "use client" の有無を確認する。
+
+## 例
+- NG: フックを使うファイルに "use client" なし
+- OK: フックを使うファイルの先頭に "use client" を記述
+
+# これらを必ず守ること。
