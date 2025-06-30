@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+
+# ビルド成果物
+dist/
+build/
+out/
+.next/
+coverage/
+
+# OS/エディタ
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# テスト/サンプル
+*.test.js
+*.test.ts
+*.test.tsx
+*.spec.js
+*.spec.ts
+*.spec.tsx
+
+# その他
+.env
+.env.* 
