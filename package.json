@@ -2,19 +2,16 @@
     "name": "@naritai-dev/eslint-config",
     "version": "2.0.0",
     "type": "module",
-    "description": "Strict ESLint and Prettier configuration for Node.js + Next.js + TypeScript + React + Tailwind CSS projects with complexity limit of 3",
+    "description": "Strict ESLint and Prettier configuration for Node.js + Next.js + TypeScript + React + Tailwind CSS projects",
     "main": "index.js",
     "exports": {
-        ".": "./index.js",
-        "./node": "./node.js"
+        ".": "./index.js"
     },
     "files": [
         "index.js",
-        "node.js",
         "eslint.config.js",
-        "node.config.js",
         ".prettierrc",
-        ".vscode/settings.json"
+        "README.md"
     ],
     "keywords": [
         "eslint",
@@ -26,7 +23,6 @@
         "nextjs",
         "tailwindcss",
         "strict",
-        "complexity-limit",
         "naritai-dev"
     ],
     "author": {
@@ -43,7 +39,6 @@
         "eslint-config-prettier": "^10.1.5",
         "eslint-plugin-import": "^2.32.0",
         "eslint-plugin-jsx-a11y": "^6.10.2",
-        "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-unicorn": "^58.0.0",
@@ -59,7 +54,6 @@
         "eslint-config-prettier": "^10.1.5",
         "eslint-plugin-import": "^2.32.0",
         "eslint-plugin-jsx-a11y": "^6.10.2",
-        "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-unicorn": "^58.0.0",
@@ -71,8 +65,8 @@
         "url": "git+https://github.com/naritai-dev/eslint-config.git"
     },
     "scripts": {
-        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-        "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+        "lint": "eslint \"**/*.{js,ts,tsx}\"",
+        "lint:fix": "eslint \"**/*.{js,ts,tsx}\" --fix",
         "publish:patch": "npm version patch && npm publish",
         "publish:minor": "npm version minor && npm publish",
         "publish:major": "npm version major && npm publish"
